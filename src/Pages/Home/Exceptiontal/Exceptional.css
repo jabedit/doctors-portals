@@ -1,0 +1,7 @@
+.exceptional-container{
+    background:  linear-gradient(to right, rgba(7, 7, 7, 0.699), rgba(24, 21, 21, 0.733)),
+    url('../../../assets//images/dantals.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

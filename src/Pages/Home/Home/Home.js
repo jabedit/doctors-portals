@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdAirplaneTicket } from 'react-icons/md';
-import Footer from '../../Footer/Footer';
+
 import Banner from '../Banner/Banner';
 import BannerBottom from '../BannerBottom/BannerBottom';
 import ContactUs from '../ContactUs/ContactUs';
@@ -21,7 +21,7 @@ const Home = () => {
             <Testimonial />
             
             <ContactUs />
-            <Footer />
+       
         </div>
     );
 };

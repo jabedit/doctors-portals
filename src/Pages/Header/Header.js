@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthProvider";
 
 const Header = () => {
+  const {user, logOut} = useContext(AuthContext)
+
+  const handleSignOut
   const menuItems = (
     <React.Fragment>
       <li>
@@ -19,9 +23,15 @@ const Header = () => {
       <li>
         <Link to="/">Contact us</Link>
       </li>
-      <li>
-        <Link to="/">Login</Link>
-      </li>
+      {user.uid ?
+        <li>
+        <Link to="/">Sign Out</Link>
+        </li>:
+        <li>
+        <Link to="/login">Login</Link>
+        </li>
+      }
+      
     </React.Fragment>
   );
   return (

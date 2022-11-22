@@ -5,7 +5,11 @@ import { AuthContext } from "../../Context/AuthProvider";
 const Header = () => {
   const {user, logOut} = useContext(AuthContext)
 
-  const handleSignOut
+  const handleSignOut = ()=>{
+    logOut()
+    .then(()=>{})
+    .catch((error)=>console.log(error))
+  }
   const menuItems = (
     <React.Fragment>
       <li>
@@ -23,9 +27,12 @@ const Header = () => {
       <li>
         <Link to="/">Contact us</Link>
       </li>
-      {user.uid ?
+      <li>
+        <Link to="/dashboard">Dashboard</Link>
+      </li>
+      {user?.uid ?
         <li>
-        <Link to="/">Sign Out</Link>
+        <button onClick={handleSignOut}>Sign Out</button>
         </li>:
         <li>
         <Link to="/login">Login</Link>
